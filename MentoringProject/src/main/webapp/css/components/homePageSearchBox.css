@@ -1,0 +1,54 @@
+.search__box {
+  width: 430px;
+  display: inline-block;
+  padding: 20px 30px;
+  background-color: white;
+  position: relative;
+  top: 10px;
+  left: 50px;
+  border-radius: 6px;
+  box-shadow: 0 2px 2px 0 rgb(214, 214, 214);
+}
+
+.search__title {
+  padding: 10px 0;
+  font-size: 30px;
+  font-weight: 800;
+  color: rgb(75, 74, 74);
+}
+
+table {
+  width: 100%;
+}
+
+.search__sub__title {
+  padding: 10px 0;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.search__input {
+  height: 45px;
+  width: 100%;
+  color: rgb(100, 98, 98);
+  font-size: 15px;
+  border: 1px solid rgb(230, 227, 227);
+}
+
+.search__button {
+  display: grid;
+  justify-content: end;
+  padding: 20px 0;
+}
+
+.button {
+  background-color: #ff5a5f;
+  color: white;
+  width: 70px;
+  height: 45px;
+  font-size: 15px;
+  font-weight: 700; /*굵기*/
+  border-radius: 6px;
+  border: 0;
+  cursor: pointer;
+}

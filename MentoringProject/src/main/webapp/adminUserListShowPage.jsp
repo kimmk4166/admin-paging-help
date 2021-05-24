@@ -32,5 +32,15 @@
 			</tr>		
 		</c:forEach>
 	</table>
+	<table>
+		<tr>
+			<td colspan="4" align="center">
+			<!-- 페이징 부분 -->
+			<c:forEach items="${pageList }" var="page"><!-- 유저리스트를 불러오기  -->
+				<a href="adminUserListShowPage.do?page=${page }">${page}</a>
+			</c:forEach>
+			</td>
+		</tr>
+	</table>
 </body>
 </html>

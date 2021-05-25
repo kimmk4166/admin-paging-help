@@ -37,7 +37,7 @@ public class AdminAnnouncementListDao {
 		
 		ArrayList<AdminAnnouncementListDto> dtos=new ArrayList<AdminAnnouncementListDto>();
 
-		String query = "SELECT * FROM notice ORDER BY noticepk DESC LIMIT ?, ?";
+		String query = "SELECT * FROM notice where outdate is null ORDER BY noticepk DESC LIMIT ?, ?";
 
 		int offset = requestPage - 1;
 		
@@ -242,11 +242,17 @@ public class AdminAnnouncementListDao {
 		try {
 			connection=datasource.getConnection();
 			
-			String query="delete from notice where noticepk=?";
+			String query="update notice set outdate=now() where noticepk=?";
 			preparedStatement=connection.prepareStatement(query);
-			
 			preparedStatement.setString(1, noticepk);
 			preparedStatement.executeUpdate();
+			
+			
+//			String query="delete from notice where noticepk=?";
+//			preparedStatement=connection.prepareStatement(query);
+//			
+//			preparedStatement.setString(1, noticepk);
+//			preparedStatement.executeUpdate();
 		}catch(Exception e) {
 			e.printStackTrace();
 		}finally {
